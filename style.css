@@ -1,0 +1,86 @@
+/* تنسيقات عامة وخلفية جذابة */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #fff;
+}
+
+/* صندوق البورتوفوليو في المنتصف */
+.card-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+/* تنسيق الصورة الشخصية */
+.profile-img img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+/* تنسيق النصوص */
+.card-container h1 {
+    margin: 10px 0;
+    font-size: 24px;
+}
+
+.card-container p {
+    font-size: 14px;
+    color: #e0e0e0;
+    margin-bottom: 25px;
+}
+
+/* تنسيق أزرار السوشيال ميديا */
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    padding: 12px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* تأثير التفاعل عند الوقوف بالفأرة (Hover) */
+.social-btn:hover {
+    background: #fff;
+    color: #1f1c2c;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* تخصيص ألوان الأيقونات حسب المنصة عند الـ Hover (اختياري) */
+.social-btn.facebook:hover { background: #1877f2; color: #fff; }
+.social-btn.instagram:hover { background: #e4405f; color: #fff; }
+.social-btn.tiktok:hover { background: #000000; color: #fff; }
+.social-btn.linkedin:hover { background: #0a66c2; color: #fff; }
+.social-btn.github:hover { background: #333; color: #fff; }
+.social-btn.whatsapp:hover { background: #25d366; color: #fff; }
