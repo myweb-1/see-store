@@ -99,90 +99,79 @@ body {
 .social-btn.tiktok:hover { color: #ffffff; border-color: rgba(255, 255, 255, 0.4); }
 .social-btn.whatsapp:hover { color: #25d366; border-color: rgba(37, 211, 102, 0.4); }
 
-/* تنسيق صندوق العنوان في الأسفل */
-.location-box {
-    margin-top: 15px;
-    padding: 12px;
-    background: rgba(0, 0, 0, 0.25);
-    border-radius: 12px;
-    font-size: 12px;
-    color: #cbd5e0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.04);
-    line-height: 1.4;
-}
-
-.location-box i {
-    color: #f56565;
-    font-size: 14px;
-    flex-shrink: 0;
-}
-
-/* تنسيق قسم كتابة التقييم */
+/* تنسيق صندوق العنوان في الأسفل *//* تنسيق قسم كتابة التقييم - مُحسّن ليتناسب مع التصميم */
 .review-section {
-    margin-top: 20px;
-    padding-top: 15px;
+    margin-top: 30px;
+    padding-top: 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     text-align: right;
+    width: 100%;
 }
 
 .review-section h3 {
-    font-size: 15px;
-    color: #fff;
-    margin-bottom: 10px;
-    text-align: center;
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 15px;
+    text-align: right; /* محاذاة العنوان لليمين */
+    font-weight: 700;
 }
 
 .review-section form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px; /* مسافة بين الحقول */
 }
 
+/* تنسيق الحقول (الاسم _ والتعليق) */
 .review-section input, 
 .review-section textarea {
     width: 100%;
-    padding: 10px 12px;
-    background: rgba(255, 255, 255, 0.05);
+    padding: 12px 15px;
+    background: rgba(255, 255, 255, 0.05); /* خلفية داكنة خفيفة */
     border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
+    border-radius: 12px; /* زوايا دائرية تشبه الأزرار */
     color: #fff;
     font-family: inherit;
-    font-size: 14px;
-    box-sizing: border-box;
-    resize: none;
-}
-
-.review-section input:focus, 
-.review-section textarea:focus {
-    outline: none;
-    border-color: rgba(255, 255, 255, 0.3);
-    background: rgba(255, 255, 255, 0.08);
-}
-
-.review-section input::placeholder, 
-.review-section textarea::placeholder {
-    color: #8892b0;
-}
-
-/* زر الإرسال */
-.submit-btn {
-    background: rgba(255, 255, 255, 0.15);
-    color: #fff;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 10px;
-    border-radius: 10px;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
+    font-size: 15px;
+    box-sizing: border-box; /* مهم لضبط الحجم */
+    resize: none; /* منع تغيير حجم الـ textarea يدوياً */
     transition: all 0.3s ease;
 }
 
-.submit-btn:hover {
+/* تأثير عند التركيز على الحقل */
+.review-section input:focus, 
+.review-section textarea:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* تنسيق النص داخل الحقول (placeholder) */
+.review-section input::placeholder, 
+.review-section textarea::placeholder {
+    color: #8892b0;
+    opacity: 1;
+}
+
+/* زر الإرسال (شكل مربع وأنيق) */
+.review-section .submit-btn {
+    width: 100%; /* عرض كامل */
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 14px;
+    border-radius: 12px; /* زوايا دائرية */
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 5px;
+}
+
+/* تأثير التفاعل مع الزر */
+.review-section .submit-btn:hover {
     background: #fff;
-    color: #0f1016;
+    color: #1a1d29; /* لون النص الداكن الأساسي */
     transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
