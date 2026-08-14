@@ -6,44 +6,46 @@ body {
         radial-gradient(circle at 10% 20%, rgba(120, 119, 198, 0.15) 0%, transparent 40%),
         radial-gradient(circle at 90% 80%, rgba(74, 144, 226, 0.15) 0%, transparent 40%);
     margin: 0;
-    padding: 0;
+    padding: 15px; /* مسافة أمان محيطة للشاشات الصغيرة */
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     color: #fff;
     direction: rtl;
+    box-sizing: border-box;
 }
 
-/* صندوق الكارد الرئيسي بتصميم زجاجي فاخر (Glassmorphism) */
+/* صندوق الكارد الرئيسي بتصميم زجاجي فاخر ومقاسات مثالية للفون */
 .card-container {
-    background: rgba(25, 27, 38, 0.7);
+    background: rgba(25, 27, 38, 0.75);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border: 1px solid rgba(255, 255, 255, 0.08);
-    padding: 35px 25px;
-    border-radius: 24px;
+    padding: 25px 18px; /* تقليل الحشو قليلاً ليناسب الشاشات الصغيرة */
+    border-radius: 20px;
     text-align: center;
-    width: 90%;
-    max-width: 420px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 380px; /* تصغير العرض الأقصى ليكون مريحاً للعين على الجوال */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
 }
 
 /* تنسيق صورة البروفايل بإطار متوهج */
 .profile-img img {
-    width: 110px;
-    height: 110px;
+    width: 95px;
+    height: 95px;
     border-radius: 50%;
     border: 3px solid rgba(255, 255, 255, 0.2);
     object-fit: cover;
-    margin-bottom: 15px;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    margin-bottom: 12px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
 }
 
 /* العنوان الرئيسي (اسم المتجر أو البراند) */
 .card-container h1 {
-    margin: 10px 0 5px 0;
-    font-size: 26px;
+    margin: 5px 0 5px 0;
+    font-size: 22px;
     font-weight: 800;
     letter-spacing: 0.5px;
     color: #ffffff;
@@ -51,18 +53,18 @@ body {
 
 /* الوصف أو النبذة تحت الاسم */
 .card-container p {
-    font-size: 14px;
+    font-size: 13px;
     color: #a0aec0;
-    margin-bottom: 25px;
-    line-height: 1.5;
+    margin-bottom: 20px;
+    line-height: 1.4;
 }
 
 /* حاوية أزرار السوشيال ميديا */
 .social-links {
     display: flex;
     flex-direction: column;
-    gap: 14px;
-    margin-bottom: 25px;
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
 /* تصميم الأزرار الحديثة */
@@ -70,13 +72,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 12px;
+    gap: 10px;
     background: rgba(255, 255, 255, 0.05);
     color: #fff;
-    padding: 14px 20px;
-    border-radius: 14px;
+    padding: 12px 15px;
+    border-radius: 12px;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 600;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     border: 1px solid rgba(255, 255, 255, 0.08);
@@ -86,56 +88,62 @@ body {
 .social-btn:hover {
     background: rgba(255, 255, 255, 0.12);
     border-color: rgba(255, 255, 255, 0.3);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* تخصيص ألوان الأيقونات والتأثيرات للمنصات */
 .social-btn i {
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .social-btn.instagram:hover { color: #e4405f; border-color: rgba(228, 64, 95, 0.4); }
 .social-btn.tiktok:hover { color: #ffffff; border-color: rgba(255, 255, 255, 0.4); }
 .social-btn.whatsapp:hover { color: #25d366; border-color: rgba(37, 211, 102, 0.4); }
 
-/* تنسيق صندوق العنوان في الأسفل *//* تنسيق قسم كتابة التقييم - مُحسّن ليتناسب مع التصميم */
+/* تنسيق قسم كتابة التقييم */
 .review-section {
-    margin-top: 30px;
-    padding-top: 20px;
+    margin-top: 20px;
+    padding-top: 15px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     text-align: right;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .review-section h3 {
-    font-size: 18px;
+    font-size: 15px;
     color: #ffffff;
-    margin-bottom: 15px;
-    text-align: right; /* محاذاة العنوان لليمين */
+    margin-bottom: 10px;
+    text-align: right;
     font-weight: 700;
 }
 
 .review-section form {
     display: flex;
     flex-direction: column;
-    gap: 12px; /* مسافة بين الحقول */
+    gap: 10px;
 }
 
-/* تنسيق الحقول (الاسم _ والتعليق) */
+/* تنسيق الحقول (الاسم والتعليق) */
 .review-section input, 
 .review-section textarea {
     width: 100%;
-    padding: 12px 15px;
-    background: rgba(255, 255, 255, 0.05); /* خلفية داكنة خفيفة */
+    padding: 10px 12px;
+    background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px; /* زوايا دائرية تشبه الأزرار */
+    border-radius: 10px;
     color: #fff;
     font-family: inherit;
-    font-size: 15px;
-    box-sizing: border-box; /* مهم لضبط الحجم */
-    resize: none; /* منع تغيير حجم الـ textarea يدوياً */
+    font-size: 13px;
+    box-sizing: border-box;
+    resize: none;
     transition: all 0.3s ease;
+}
+
+/* تحكم في ارتفاع حقل التعليق ليشمل مساحة ألطف ولا يكون طويلاً جداً */
+.review-section textarea {
+    height: 75px;
 }
 
 /* تأثير عند التركيز على الحقل */
@@ -153,25 +161,25 @@ body {
     opacity: 1;
 }
 
-/* زر الإرسال (شكل مربع وأنيق) */
+/* زر الإرسال */
 .review-section .submit-btn {
-    width: 100%; /* عرض كامل */
+    width: 100%;
     background: rgba(255, 255, 255, 0.15);
     color: #fff;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 14px;
-    border-radius: 12px; /* زوايا دائرية */
-    font-size: 16px;
+    padding: 11px;
+    border-radius: 10px;
+    font-size: 14px;
     font-weight: 700;
     cursor: pointer;
     transition: all 0.3s ease;
-    margin-top: 5px;
+    margin-top: 2px;
 }
 
 /* تأثير التفاعل مع الزر */
 .review-section .submit-btn:hover {
     background: #fff;
-    color: #1a1d29; /* لون النص الداكن الأساسي */
+    color: #1a1d29;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
