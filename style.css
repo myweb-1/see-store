@@ -1,7 +1,10 @@
-/* تنسيقات عامة وخلفية جذابة */
+/* تنسيقات عامة وخلفية احترافية داكنة */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    font-family: 'Cairo', 'Segoe UI', Tahoma, sans-serif;
+    background: #0f1016;
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(120, 119, 198, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(74, 144, 226, 0.15) 0%, transparent 40%);
     margin: 0;
     padding: 0;
     display: flex;
@@ -9,78 +12,111 @@ body {
     align-items: center;
     min-height: 100vh;
     color: #fff;
+    direction: rtl;
 }
 
-/* صندوق البورتوفوليو في المنتصف */
+/* صندوق الكارد الرئيسي بتصميم زجاجي فاخر (Glassmorphism) */
 .card-container {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 30px;
-    border-radius: 20px;
+    background: rgba(25, 27, 38, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 35px 25px;
+    border-radius: 24px;
     text-align: center;
     width: 90%;
-    max-width: 400px;
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    max-width: 420px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
 }
 
-/* تنسيق الصورة الشخصية */
+/* تنسيق صورة البروفايل بإطار متوهج */
 .profile-img img {
-    width: 120px;
-    height: 120px;
+    width: 110px;
+    height: 110px;
     border-radius: 50%;
-    border: 3px solid #fff;
+    border: 3px solid rgba(255, 255, 255, 0.2);
     object-fit: cover;
     margin-bottom: 15px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
 }
 
-/* تنسيق النصوص */
+/* العنوان الرئيسي (اسم المتجر أو البراند) */
 .card-container h1 {
-    margin: 10px 0;
-    font-size: 24px;
+    margin: 10px 0 5px 0;
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    color: #ffffff;
 }
 
+/* الوصف أو النبذة تحت الاسم */
 .card-container p {
     font-size: 14px;
-    color: #e0e0e0;
+    color: #a0aec0;
     margin-bottom: 25px;
+    line-height: 1.5;
 }
 
-/* تنسيق أزرار السوشيال ميديا */
+/* حاوية أزرار السوشيال ميديا */
 .social-links {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 14px;
+    margin-bottom: 25px;
 }
 
+/* تصميم الأزرار الحديثة */
 .social-btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    background: rgba(255, 255, 255, 0.15);
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.05);
     color: #fff;
-    padding: 12px;
-    border-radius: 10px;
+    padding: 14px 20px;
+    border-radius: 14px;
     text-decoration: none;
     font-size: 16px;
     font-weight: 600;
-    transition: all 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* تأثير التفاعل عند الوقوف بالفأرة (Hover) */
+/* تأثير التفاعل عند الوقوف بالفأرة أو اللمس */
 .social-btn:hover {
-    background: #fff;
-    color: #1f1c2c;
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.3);
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* تخصيص ألوان الأيقونات حسب المنصة عند الـ Hover (اختياري) */
-.social-btn.facebook:hover { background: #1877f2; color: #fff; }
-.social-btn.instagram:hover { background: #e4405f; color: #fff; }
-.social-btn.tiktok:hover { background: #000000; color: #fff; }
-.social-btn.linkedin:hover { background: #0a66c2; color: #fff; }
-.social-btn.github:hover { background: #333; color: #fff; }
-.social-btn.whatsapp:hover { background: #25d366; color: #fff; }
+/* تخصيص ألوان الأيقونات والتأثيرات للمنصات */
+.social-btn i {
+    font-size: 18px;
+}
+
+.social-btn.instagram:hover { color: #e4405f; border-color: rgba(228, 64, 95, 0.4); }
+.social-btn.tiktok:hover { color: #ffffff; border-color: rgba(255, 255, 255, 0.4); }
+.social-btn.whatsapp:hover { color: #25d366; border-color: rgba(37, 211, 102, 0.4); }
+
+/* تنسيق صندوق العنوان في الأسفل */
+.location-box {
+    margin-top: 15px;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    font-size: 12px;
+    color: #cbd5e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    line-height: 1.4;
+}
+
+.location-box i {
+    color: #f56565;
+    font-size: 14px;
+    flex-shrink: 0;
+}
